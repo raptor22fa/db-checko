@@ -1,0 +1,10 @@
+local.properties
+target
+.settings
+.classpath
+.project
+.idea
+*iml
+nbactions.xml
+nb-configuration.xml
+/drivers
