@@ -4,7 +4,7 @@
 
     <groupId>cz.raptor22fa</groupId>
     <artifactId>db-checko</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>db-checko</name>
