@@ -1,0 +1,37 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.0 http://maven.apache.org/xsd/assembly-2.1.0.xsd">
+    <id>dist</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <fileSets>
+        <!-- JDBC drivers -->
+        <fileSet>
+            <directory>${project.basedir}/drivers</directory>
+            <outputDirectory>drivers</outputDirectory>
+            <includes>
+                <include>*.jar</include>
+            </includes>
+        </fileSet>
+        <!-- db-checko itself -->
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory>target</outputDirectory>
+            <includes>
+                <include>${project.build.finalName}.jar</include>
+            </includes>
+        </fileSet>
+        <!-- resources -->
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>database.properties</include>
+                <include>dbchecko.bat</include>
+                <include>dbchecko.sh</include>
+                <include>license.txt</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
